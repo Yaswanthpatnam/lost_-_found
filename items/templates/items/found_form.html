@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    found
+{% endblock title %}
+
+{% block content %}
+<h1>Report Found Item</h1>    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}
+
+
+
